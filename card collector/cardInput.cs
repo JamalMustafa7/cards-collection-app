@@ -16,7 +16,7 @@ namespace card_collector
     public partial class cardInput : Form
     {
         //Connection String for SQL Server Database
-        string connectionString = "Server=JAMAL\\SQLEXPRESS02;Database=cards_collection;User Id=your_username;Integrated Security=true";
+        string connectionString = "Server=JAMAL\\SQLEXPRESS02;Database=cards_collection;Integrated Security=true";
 
         public cardInput()
         {
@@ -45,14 +45,61 @@ namespace card_collector
             string format = "dddd, MMMM d, yyyy";//Format string
             SqlConnection con=new SqlConnection(connectionString);
             con.Open();
-
+            if(string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Vendor is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string vendor = textBox1.Text;
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                MessageBox.Show("Year is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string year = textBox4.Text;
+            if (string.IsNullOrWhiteSpace(textBox9.Text))
+            {
+                MessageBox.Show("Set is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string set = textBox9.Text;
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                MessageBox.Show("League is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string league = textBox2.Text;
+            if (string.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Team is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string team = textBox5.Text;
+            if (string.IsNullOrWhiteSpace(textBox8.Text))
+            {
+                MessageBox.Show("Player is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string player = textBox8.Text;
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                MessageBox.Show("Card Type is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string card_type = textBox3.Text;
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                MessageBox.Show("Card Variety is a required field", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             string card_variety = textBox6.Text;
             string card_number= textBox7.Text;
             string auto = checkBox1.Checked ? "Yes" : "No";
@@ -156,7 +203,6 @@ namespace card_collector
                 DateTimePicker dtp = (DateTimePicker)sender;
                 dtp.CustomFormat = "";
                 dtp.Format = DateTimePickerFormat.Long;
-                MessageBox.Show(dtp.Value.ToString()," ",MessageBoxButtons.OK);
             }
     }
 }

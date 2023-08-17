@@ -418,6 +418,8 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 35);
             this.dateTimePicker2.TabIndex = 33;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+
             // 
             // label19
             // 
@@ -465,6 +467,8 @@
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 35);
             this.dateTimePicker3.TabIndex = 39;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+
             // 
             // label23
             // 

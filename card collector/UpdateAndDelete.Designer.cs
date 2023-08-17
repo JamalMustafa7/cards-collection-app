@@ -73,6 +73,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,7 +346,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(240, 351);
+            this.textBox10.Location = new System.Drawing.Point(218, 353);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(200, 35);
             this.textBox10.TabIndex = 26;
@@ -353,7 +355,7 @@
             // 
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(496, 349);
+            this.label15.Location = new System.Drawing.Point(443, 353);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(160, 37);
             this.label15.TabIndex = 27;
@@ -364,7 +366,7 @@
             // 
             this.dateTimePicker1.CustomFormat = " ";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(740, 349);
+            this.dateTimePicker1.Location = new System.Drawing.Point(632, 355);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 35);
             this.dateTimePicker1.TabIndex = 28;
@@ -374,7 +376,7 @@
             // 
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(981, 351);
+            this.label16.Location = new System.Drawing.Point(848, 353);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(160, 37);
             this.label16.TabIndex = 29;
@@ -383,11 +385,10 @@
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(1188, 349);
+            this.textBox11.Location = new System.Drawing.Point(1066, 351);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(66, 35);
             this.textBox11.TabIndex = 30;
-            this.textBox11.Text = "8/10";
             // 
             // label17
             // 
@@ -413,16 +414,17 @@
             // 
             this.dateTimePicker2.CustomFormat = " ";
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(240, 451);
+            this.dateTimePicker2.Location = new System.Drawing.Point(206, 451);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 35);
             this.dateTimePicker2.TabIndex = 33;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // label19
             // 
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(511, 453);
+            this.label19.Location = new System.Drawing.Point(443, 451);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(160, 37);
             this.label19.TabIndex = 34;
@@ -431,7 +433,7 @@
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(740, 455);
+            this.textBox12.Location = new System.Drawing.Point(632, 456);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(200, 35);
             this.textBox12.TabIndex = 35;
@@ -460,16 +462,17 @@
             // 
             this.dateTimePicker3.CustomFormat = " ";
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(240, 549);
+            this.dateTimePicker3.Location = new System.Drawing.Point(206, 551);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 35);
             this.dateTimePicker3.TabIndex = 39;
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // label23
             // 
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(511, 547);
+            this.label23.Location = new System.Drawing.Point(443, 549);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(160, 37);
             this.label23.TabIndex = 40;
@@ -478,7 +481,7 @@
             // 
             // textBox13
             // 
-            this.textBox13.Location = new System.Drawing.Point(740, 547);
+            this.textBox13.Location = new System.Drawing.Point(632, 549);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(200, 35);
             this.textBox13.TabIndex = 41;
@@ -486,7 +489,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(1002, 433);
+            this.pictureBox1.Location = new System.Drawing.Point(1023, 433);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -496,7 +499,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1121, 456);
+            this.button1.Location = new System.Drawing.Point(1144, 452);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 35);
             this.button1.TabIndex = 43;
@@ -524,12 +527,42 @@
             this.textBox14.Size = new System.Drawing.Size(152, 35);
             this.textBox14.TabIndex = 46;
             // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Gainsboro;
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(853, 548);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(160, 36);
+            this.label24.TabIndex = 47;
+            this.label24.Text = "Save";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Gainsboro;
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(1066, 548);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(160, 36);
+            this.label25.TabIndex = 48;
+            this.label25.Text = "Don\'t Save";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.Click += new System.EventHandler(this.label25_Click);
+            // 
             // UpdateAndDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1256, 615);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.button1);
@@ -580,6 +613,7 @@
             this.Name = "UpdateAndDelete";
             this.Text = "cardInput";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.UpdateAndDelete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -633,5 +667,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
