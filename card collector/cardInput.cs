@@ -125,7 +125,17 @@ namespace card_collector
                 sale_date = DateTime.ParseExact(dateTimePicker3.Text, format, System.Globalization.CultureInfo.InvariantCulture);
             }
             string sale_price = textBox13.Text;
-            string quantity = textBox14.Text;
+            int quantity = 1;
+            if (int.TryParse(textBox14.Text, out int result))
+            {
+                quantity = result;
+            }
+            else
+            {
+                con.Close();
+                MessageBox.Show("Quantity can only be integer", "warning", MessageBoxButtons.OK);
+                return;
+            }
 
             string query = @"
             INSERT INTO card (

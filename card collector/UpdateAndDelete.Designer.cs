@@ -551,7 +551,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(160, 36);
             this.label25.TabIndex = 48;
-            this.label25.Text = "Don\'t Save";
+            this.label25.Text = "Cancel";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
