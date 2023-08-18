@@ -267,7 +267,16 @@ namespace card_collector
             }
             cmd.Parameters.AddWithValue("@quantity", quantity);
 
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("A record with this value already exists.", "Duplicate Record", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                con.Close();
+                return;
+            }
             con.Close();
             MessageBox.Show("Data Updated", "", MessageBoxButtons.OK);
             Form1.updateTerminator();

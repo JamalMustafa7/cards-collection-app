@@ -131,45 +131,31 @@ namespace card_collector
             SqlConnection con = new SqlConnection(connectionString);
 
 
-            string searchText = textBox1.Text.Trim().ToLower(); // Get the entered text and remove any leading/trailing whitespace
+            string searchText = textBox1.Text.Trim().ToLower()+'%'; // Get the entered text and remove any leading/trailing whitespace
             if (searchText.Length > 0) // Ensure there's valid text to search for
             {
-                //int rowCount = 0;
-                if(checkBox1.Checked && checkBox2.Checked)
-                {
-                    MessageBox.Show("You cannot Check Both CheckBoxes Please Uncheck One");
-                }
                 if (checkBox1.Checked)
                 {
                     con.Open();
-                    string query = "SELECT * FROM card WHERE LOWER(player) = @player";
+                    string query = "SELECT * FROM card WHERE LOWER(player) LIKE @player";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@player", searchText);
-                    dataTable.Clear(); // Clear the existing data in the DataTable
-                    adapter.Fill(dataTable); // Fill the DataTable with the new data
+                    dataTable.Clear(); 
+                    adapter.Fill(dataTable); 
                     dataGridView1.ClearSelection();
-                    //rowCount = dataTable.Rows.Count;
-                    //MessageBox.Show(rowCount == 0 ? "No Cards Found" : rowCount + " Rows Found", "information", MessageBoxButtons.OK);
                     con.Close();
                 }
                 else if (checkBox2.Checked)
                 {
                     con.Open();
-                    string query = "SELECT * FROM card WHERE LOWER(set) = @set";
+                    string query = "SELECT * FROM card WHERE LOWER([set]) LIKE @set";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                     adapter.SelectCommand.Parameters.AddWithValue("@set", searchText);
-                    dataTable.Clear(); // Clear the existing data in the DataTable
-                    adapter.Fill(dataTable); // Fill the DataTable with the new data
+                    dataTable.Clear();
+                    adapter.Fill(dataTable);
                     dataGridView1.ClearSelection();
-                    //rowCount = dataTable.Rows.Count;
-                    //MessageBox.Show(rowCount == 0 ? "No Cards Found" : rowCount + " Rows Found", "information", MessageBoxButtons.OK);
                     con.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Please select any of the check box first", "information", MessageBoxButtons.OK);
-                }
-
             }
             else
             {
@@ -183,6 +169,21 @@ namespace card_collector
                 //rowCount = dataTable.Rows.Count;
                 //MessageBox.Show(rowCount == 0 ? "No Cards Found" : rowCount + " Rows Found", "information", MessageBoxButtons.OK);
                 con.Close();
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox.Checked)
+            {
+                if (checkBox == checkBox1)
+                {
+                    checkBox2.Checked = false;
+                }
+                else
+                {
+                    checkBox1.Checked = false;
+                }
             }
         }
     }

@@ -35,6 +35,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(249, 201);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1233, 780);
@@ -85,7 +87,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1009, 72);
+            this.textBox1.Location = new System.Drawing.Point(1132, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(274, 26);
             this.textBox1.TabIndex = 4;
@@ -94,28 +96,43 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1009, 146);
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(1132, 124);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(124, 24);
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Player Name";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1170, 146);
+            this.checkBox2.Location = new System.Drawing.Point(1294, 124);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(98, 24);
             this.checkBox2.TabIndex = 6;
             this.checkBox2.Text = "Card Set";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(975, 72);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 40);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1496, 648);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
@@ -142,6 +159,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button button4;
     }
 }
 
